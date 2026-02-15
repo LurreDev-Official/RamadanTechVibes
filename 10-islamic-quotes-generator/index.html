@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Islamic Quotes Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>✨ Islamic Quotes</h1>
+        <p class="subtitle">Daily Inspiration from Quran and Hadith</p>
+        
+        <div class="quote-display">
+            <div class="quote-icon">💬</div>
+            <div class="quote-text" id="quote-text">Click the button to get an inspiring quote</div>
+            <div class="quote-source" id="quote-source"></div>
+        </div>
+        
+        <div class="button-group">
+            <button onclick="generateQuote()">Generate New Quote</button>
+            <button onclick="shareQuote()" class="secondary">Share Quote</button>
+            <button onclick="copyQuote()" class="secondary">Copy to Clipboard</button>
+        </div>
+        
+        <div class="category-filter">
+            <h3>Filter by Category</h3>
+            <div class="filter-buttons">
+                <button onclick="filterCategory('all')" class="filter-btn active">All</button>
+                <button onclick="filterCategory('quran')" class="filter-btn">Quran</button>
+                <button onclick="filterCategory('hadith')" class="filter-btn">Hadith</button>
+                <button onclick="filterCategory('wisdom')" class="filter-btn">Wisdom</button>
+            </div>
+        </div>
+        
+        <div class="favorites">
+            <h3>Favorite Quotes (<span id="fav-count">0</span>)</h3>
+            <button onclick="toggleFavorite()" id="fav-btn" class="secondary">❤️ Add to Favorites</button>
+            <div id="favorites-list" class="favorites-list"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

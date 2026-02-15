@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Islamic Reminder App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>⏰ Islamic Reminder App</h1>
+        <p class="subtitle">Set Reminders for Prayers & Activities</p>
+        
+        <div class="current-time-display">
+            <div id="current-time"></div>
+        </div>
+        
+        <div class="add-reminder">
+            <h3>Add New Reminder</h3>
+            <div class="input-group">
+                <label for="reminder-title">Title:</label>
+                <input type="text" id="reminder-title" placeholder="e.g., Read Quran">
+            </div>
+            <div class="input-group">
+                <label for="reminder-time">Time:</label>
+                <input type="time" id="reminder-time">
+            </div>
+            <div class="input-group">
+                <label for="reminder-type">Type:</label>
+                <select id="reminder-type">
+                    <option value="prayer">Prayer</option>
+                    <option value="quran">Quran Reading</option>
+                    <option value="dua">Dua & Dhikr</option>
+                    <option value="charity">Charity</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label>
+                    <input type="checkbox" id="reminder-daily">
+                    Repeat Daily
+                </label>
+            </div>
+            <button onclick="addReminder()">Add Reminder</button>
+        </div>
+        
+        <div class="reminders-section">
+            <h3>Active Reminders (<span id="reminder-count">0</span>)</h3>
+            <div id="reminders-list" class="reminders-list"></div>
+        </div>
+        
+        <div class="notification-status">
+            <p id="notification-status">Notifications: <span id="status-text">Not enabled</span></p>
+            <button onclick="enableNotifications()" id="enable-notif-btn">Enable Notifications</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quran Verse of the Day</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📖 Quran Verse of the Day</h1>
+        <p class="subtitle">Daily Inspiration from the Holy Quran</p>
+        
+        <div class="date-display">
+            <div id="current-date"></div>
+        </div>
+        
+        <div class="verse-display">
+            <div class="verse-icon">☪️</div>
+            <div class="verse-arabic" id="verse-arabic"></div>
+            <div class="verse-reference" id="verse-reference"></div>
+            <div class="verse-translation" id="verse-translation"></div>
+        </div>
+        
+        <div class="button-group">
+            <button onclick="getNewVerse()">Get New Verse</button>
+            <button onclick="shareVerse()" class="secondary">Share Verse</button>
+            <button onclick="copyVerse()" class="secondary">Copy to Clipboard</button>
+        </div>
+        
+        <div class="history-section">
+            <h3>Recent Verses</h3>
+            <div id="history-list" class="history-list"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

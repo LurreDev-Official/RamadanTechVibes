@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fasting Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🌙 Fasting Tracker</h1>
+        <p class="subtitle">Track Your Fasting Days & Statistics</p>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value" id="total-fasts">0</div>
+                <div class="stat-label">Total Fasts</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="current-streak">0</div>
+                <div class="stat-label">Current Streak</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="longest-streak">0</div>
+                <div class="stat-label">Longest Streak</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="month-fasts">0</div>
+                <div class="stat-label">This Month</div>
+            </div>
+        </div>
+        
+        <div class="today-fast">
+            <h3>Today's Fast</h3>
+            <div class="today-date" id="today-date"></div>
+            <button onclick="toggleTodayFast()" id="fast-btn" class="fast-toggle-btn">Mark as Fasted</button>
+        </div>
+        
+        <div class="add-fast">
+            <h3>Add Past Fasting Day</h3>
+            <div class="input-group">
+                <label for="fast-date">Date:</label>
+                <input type="date" id="fast-date">
+            </div>
+            <div class="input-group">
+                <label for="fast-type">Type:</label>
+                <select id="fast-type">
+                    <option value="obligatory">Obligatory (Ramadan)</option>
+                    <option value="voluntary">Voluntary</option>
+                    <option value="makeup">Makeup (Qada)</option>
+                    <option value="monday">Monday</option>
+                    <option value="thursday">Thursday</option>
+                    <option value="white-days">White Days (13-15)</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="fast-notes">Notes (optional):</label>
+                <textarea id="fast-notes" rows="2" placeholder="Add notes"></textarea>
+            </div>
+            <button onclick="addFast()">Add Fast</button>
+        </div>
+        
+        <div class="calendar-section">
+            <h3>Fasting Calendar</h3>
+            <div class="month-selector">
+                <button onclick="changeMonth(-1)">‹</button>
+                <span id="month-year"></span>
+                <button onclick="changeMonth(1)">›</button>
+            </div>
+            <div id="calendar" class="calendar"></div>
+        </div>
+        
+        <div class="history-section">
+            <h3>Recent Fasts</h3>
+            <div id="fast-history" class="fast-history"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

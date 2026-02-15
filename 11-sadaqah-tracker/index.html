@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sadaqah Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>💰 Sadaqah Tracker</h1>
+        <p class="subtitle">Track Your Charity Donations</p>
+        
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-value" id="total-amount">$0.00</div>
+                <div class="stat-label">Total Donated</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="donation-count">0</div>
+                <div class="stat-label">Donations</div>
+            </div>
+        </div>
+        
+        <div class="add-donation">
+            <h3>Add New Donation</h3>
+            <div class="input-group">
+                <label for="amount">Amount ($):</label>
+                <input type="number" id="amount" step="0.01" placeholder="0.00">
+            </div>
+            <div class="input-group">
+                <label for="cause">Cause/Organization:</label>
+                <input type="text" id="cause" placeholder="e.g., Local Masjid">
+            </div>
+            <div class="input-group">
+                <label for="date">Date:</label>
+                <input type="date" id="date">
+            </div>
+            <div class="input-group">
+                <label for="notes">Notes (optional):</label>
+                <textarea id="notes" rows="3" placeholder="Add notes about this donation"></textarea>
+            </div>
+            <button onclick="addDonation()">Add Donation</button>
+        </div>
+        
+        <div class="donation-history">
+            <h3>Donation History</h3>
+            <div class="filter-buttons">
+                <button onclick="filterDonations('all')" class="filter-btn active">All</button>
+                <button onclick="filterDonations('month')" class="filter-btn">This Month</button>
+                <button onclick="filterDonations('year')" class="filter-btn">This Year</button>
+            </div>
+            <div id="donation-list" class="donation-list"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

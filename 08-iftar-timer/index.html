@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iftar Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🌙 Iftar Timer</h1>
+        <p class="subtitle">Countdown to Maghrib Prayer</p>
+        
+        <div class="current-time">
+            <div id="current-time"></div>
+        </div>
+        
+        <div class="input-group">
+            <label for="iftar-time">Set Maghrib Time:</label>
+            <input type="time" id="iftar-time" value="18:30">
+        </div>
+        
+        <button onclick="startTimer()">Start Countdown</button>
+        
+        <div id="countdown" class="countdown">
+            <div class="time-block">
+                <div class="time-value" id="hours">00</div>
+                <div class="time-label">Hours</div>
+            </div>
+            <div class="time-separator">:</div>
+            <div class="time-block">
+                <div class="time-value" id="minutes">00</div>
+                <div class="time-label">Minutes</div>
+            </div>
+            <div class="time-separator">:</div>
+            <div class="time-block">
+                <div class="time-value" id="seconds">00</div>
+                <div class="time-label">Seconds</div>
+            </div>
+        </div>
+        
+        <div id="message" class="message"></div>
+        
+        <div class="quick-times">
+            <h3>Quick Set Times</h3>
+            <div class="quick-buttons">
+                <button onclick="setQuickTime('18:00')">6:00 PM</button>
+                <button onclick="setQuickTime('18:30')">6:30 PM</button>
+                <button onclick="setQuickTime('19:00')">7:00 PM</button>
+                <button onclick="setQuickTime('19:30')">7:30 PM</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
