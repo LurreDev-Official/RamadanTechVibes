@@ -3,8 +3,8 @@ function getNextRamadan() {
     const now = new Date();
     const currentYear = now.getFullYear();
     
-    // Ramadan 2025 starts approximately March 1, 2025
-    // Each year Ramadan comes about 11 days earlier
+    // Base date: Ramadan 2025 starts approximately March 1, 2025
+    // Islamic calendar year is ~354 days, so Ramadan shifts ~11 days earlier each year
     const ramadan2025 = new Date('2025-03-01T00:00:00');
     
     if (now < ramadan2025) {
