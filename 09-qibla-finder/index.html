@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qibla Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🧭 Qibla Finder</h1>
+        <p class="subtitle">Find Direction to Kaaba</p>
+        
+        <div class="compass-container">
+            <div class="compass" id="compass">
+                <div class="compass-rose">
+                    <div class="direction north">N</div>
+                    <div class="direction east">E</div>
+                    <div class="direction south">S</div>
+                    <div class="direction west">W</div>
+                </div>
+                <div class="qibla-arrow" id="qibla-arrow">
+                    <div class="arrow">↑</div>
+                    <div class="arrow-label">QIBLA</div>
+                </div>
+                <div class="center-dot"></div>
+            </div>
+        </div>
+        
+        <div id="info" class="info">
+            <div class="info-item">
+                <strong>Qibla Direction:</strong>
+                <span id="qibla-angle">---</span>°
+            </div>
+            <div class="info-item">
+                <strong>Distance to Kaaba:</strong>
+                <span id="distance">---</span> km
+            </div>
+        </div>
+        
+        <div class="location-info">
+            <div class="input-group">
+                <label>Your Location:</label>
+                <div id="location">Getting location...</div>
+            </div>
+        </div>
+        
+        <button onclick="findQibla()">Find Qibla Direction</button>
+        <button onclick="useMyLocation()">Use My Location</button>
+        
+        <div class="manual-input">
+            <h3>Manual Input</h3>
+            <div class="input-group">
+                <label for="lat">Latitude:</label>
+                <input type="number" id="lat" step="0.0001" placeholder="e.g., 40.7128">
+            </div>
+            <div class="input-group">
+                <label for="lng">Longitude:</label>
+                <input type="number" id="lng" step="0.0001" placeholder="e.g., -74.0060">
+            </div>
+            <button onclick="calculateFromManual()">Calculate</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

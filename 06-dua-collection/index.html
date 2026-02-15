@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dua Collection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🤲 Dua Collection</h1>
+        <p class="subtitle">Daily Islamic Duas</p>
+        
+        <div class="category-selector">
+            <select id="category" onchange="filterDuas()">
+                <option value="all">All Duas</option>
+                <option value="morning">Morning</option>
+                <option value="evening">Evening</option>
+                <option value="daily">Daily Life</option>
+                <option value="special">Special Occasions</option>
+            </select>
+        </div>
+        
+        <div id="dua-list" class="dua-list"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

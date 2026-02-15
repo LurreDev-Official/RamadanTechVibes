@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Islamic Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📚 Islamic Quiz</h1>
+        <p class="subtitle">Test your Islamic knowledge</p>
+        
+        <div id="startScreen" class="screen">
+            <div class="quiz-info">
+                <p>Challenge yourself with questions about Islam, the Quran, Prophets, and Islamic history.</p>
+                <div class="stats">
+                    <div class="stat-item">
+                        <div class="stat-value">10</div>
+                        <div class="stat-label">Questions</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">3</div>
+                        <div class="stat-label">Minutes</div>
+                    </div>
+                </div>
+            </div>
+            <button id="startBtn" class="btn-primary">Start Quiz</button>
+        </div>
+        
+        <div id="quizScreen" class="screen hidden">
+            <div class="progress-bar">
+                <div id="progressFill" class="progress-fill"></div>
+            </div>
+            <div class="question-counter">
+                Question <span id="currentQuestion">1</span> of <span id="totalQuestions">10</span>
+            </div>
+            
+            <div id="questionText" class="question-text"></div>
+            
+            <div id="optionsContainer" class="options-container"></div>
+            
+            <button id="nextBtn" class="btn-primary hidden">Next Question</button>
+        </div>
+        
+        <div id="resultScreen" class="screen hidden">
+            <div class="result-icon">🏆</div>
+            <h2 id="resultTitle"></h2>
+            <div class="score-display">
+                <div class="score-value">
+                    <span id="finalScore">0</span> / <span id="totalScore">10</span>
+                </div>
+                <div class="score-label">Correct Answers</div>
+            </div>
+            <div id="resultMessage" class="result-message"></div>
+            <button id="restartBtn" class="btn-primary">Take Quiz Again</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

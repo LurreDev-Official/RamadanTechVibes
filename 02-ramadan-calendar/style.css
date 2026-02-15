@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.day {
+    aspect-ratio: 1;
+    background: #f8f9fa;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.day:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.day-number {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.day-name {
+    font-size: 12px;
+    color: #666;
+}
+
+.day.completed {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    border-color: #1e3c72;
+}
+
+.day.completed .day-number,
+.day.completed .day-name {
+    color: white;
+}
+
+.day.completed::after {
+    content: '✓';
+    position: absolute;
+    font-size: 48px;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.info {
+    text-align: center;
+    color: #666;
+    line-height: 1.8;
+}
+
+.info p {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+    #calendar {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 8px;
+    }
+    
+    .day-number {
+        font-size: 18px;
+    }
+    
+    .day-name {
+        font-size: 10px;
+    }
+}

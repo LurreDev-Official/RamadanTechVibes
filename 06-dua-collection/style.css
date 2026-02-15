@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.category-selector {
+    margin-bottom: 30px;
+}
+
+.category-selector select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    background: white;
+    cursor: pointer;
+}
+
+.category-selector select:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.dua-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.dua-card {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 4px solid #667eea;
+    transition: transform 0.3s;
+}
+
+.dua-card:hover {
+    transform: translateX(5px);
+}
+
+.dua-title {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.dua-arabic {
+    font-size: 24px;
+    direction: rtl;
+    text-align: right;
+    color: #764ba2;
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.dua-transliteration {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.dua-translation {
+    color: #555;
+    line-height: 1.6;
+}
+
+.dua-category {
+    display: inline-block;
+    background: #667eea;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-top: 10px;
+}

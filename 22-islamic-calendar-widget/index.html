@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Islamic Calendar Widget</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📅 Islamic Calendar</h1>
+        <p class="subtitle">Hijri and Gregorian calendar</p>
+        
+        <div class="date-display">
+            <div class="hijri-date">
+                <div class="date-label">Hijri Date</div>
+                <div id="hijriDate" class="date-value"></div>
+            </div>
+            <div class="gregorian-date">
+                <div class="date-label">Gregorian Date</div>
+                <div id="gregorianDate" class="date-value"></div>
+            </div>
+        </div>
+        
+        <div class="calendar">
+            <div class="calendar-header">
+                <button id="prevMonth">‹</button>
+                <div id="monthYear"></div>
+                <button id="nextMonth">›</button>
+            </div>
+            <div class="calendar-days">
+                <div class="day-name">Sun</div>
+                <div class="day-name">Mon</div>
+                <div class="day-name">Tue</div>
+                <div class="day-name">Wed</div>
+                <div class="day-name">Thu</div>
+                <div class="day-name">Fri</div>
+                <div class="day-name">Sat</div>
+            </div>
+            <div id="calendarGrid" class="calendar-grid"></div>
+        </div>
+        
+        <div class="islamic-months">
+            <h3>Islamic Months</h3>
+            <div class="months-list">
+                <span>1. Muharram</span>
+                <span>2. Safar</span>
+                <span>3. Rabi' al-Awwal</span>
+                <span>4. Rabi' al-Thani</span>
+                <span>5. Jumada al-Awwal</span>
+                <span>6. Jumada al-Thani</span>
+                <span>7. Rajab</span>
+                <span>8. Sha'ban</span>
+                <span>9. Ramadan</span>
+                <span>10. Shawwal</span>
+                <span>11. Dhu al-Qi'dah</span>
+                <span>12. Dhu al-Hijjah</span>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

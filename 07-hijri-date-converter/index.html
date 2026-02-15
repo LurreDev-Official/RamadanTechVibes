@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hijri Date Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📅 Hijri Date Converter</h1>
+        <p class="subtitle">Convert Between Gregorian and Hijri Dates</p>
+        
+        <div class="converter">
+            <div class="converter-section">
+                <h3>Gregorian to Hijri</h3>
+                <div class="input-group">
+                    <label for="gregorian-date">Gregorian Date:</label>
+                    <input type="date" id="gregorian-date">
+                </div>
+                <button onclick="convertToHijri()">Convert to Hijri</button>
+                <div id="hijri-result" class="result"></div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="converter-section">
+                <h3>Hijri to Gregorian</h3>
+                <div class="input-group">
+                    <label for="hijri-day">Day:</label>
+                    <input type="number" id="hijri-day" min="1" max="30" placeholder="1-30">
+                </div>
+                <div class="input-group">
+                    <label for="hijri-month">Month:</label>
+                    <select id="hijri-month">
+                        <option value="1">Muharram</option>
+                        <option value="2">Safar</option>
+                        <option value="3">Rabi' al-Awwal</option>
+                        <option value="4">Rabi' al-Thani</option>
+                        <option value="5">Jumada al-Awwal</option>
+                        <option value="6">Jumada al-Thani</option>
+                        <option value="7">Rajab</option>
+                        <option value="8">Sha'ban</option>
+                        <option value="9">Ramadan</option>
+                        <option value="10">Shawwal</option>
+                        <option value="11">Dhu al-Qi'dah</option>
+                        <option value="12">Dhu al-Hijjah</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="hijri-year">Year:</label>
+                    <input type="number" id="hijri-year" min="1" placeholder="e.g., 1445">
+                </div>
+                <button onclick="convertToGregorian()">Convert to Gregorian</button>
+                <div id="gregorian-result" class="result"></div>
+            </div>
+        </div>
+        
+        <div class="today-date">
+            <h3>Today's Date</h3>
+            <div id="today" class="today-display"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

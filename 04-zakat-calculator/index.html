@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zakat Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>💰 Zakat Calculator</h1>
+        <p class="subtitle">Kalkulator Zakat</p>
+        
+        <div class="tabs">
+            <button class="tab active" onclick="showTab('fitrah')">Zakat Fitrah</button>
+            <button class="tab" onclick="showTab('mal')">Zakat Mal</button>
+        </div>
+        
+        <div id="fitrah" class="tab-content active">
+            <div class="input-group">
+                <label>Harga Beras per kg:</label>
+                <input type="number" id="ricePrice" value="15000" placeholder="15000">
+            </div>
+            <div class="input-group">
+                <label>Jumlah Orang:</label>
+                <input type="number" id="people" value="1" min="1">
+            </div>
+            <button onclick="calculateFitrah()">Calculate Zakat Fitrah</button>
+            <div id="fitrahResult" class="result"></div>
+        </div>
+        
+        <div id="mal" class="tab-content">
+            <div class="input-group">
+                <label>Total Harta (Wealth):</label>
+                <input type="number" id="wealth" placeholder="100000000">
+            </div>
+            <div class="input-group">
+                <label>Nisab (85g gold price):</label>
+                <input type="number" id="nisab" value="75000000" placeholder="75000000">
+            </div>
+            <button onclick="calculateMal()">Calculate Zakat Mal</button>
+            <div id="malResult" class="result"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

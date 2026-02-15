@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramadan Goals Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 Ramadan Goals Tracker</h1>
+        <p class="subtitle">Track Your Spiritual Goals This Ramadan</p>
+        
+        <div class="progress-overview">
+            <div class="progress-card">
+                <div class="progress-value" id="completed-count">0</div>
+                <div class="progress-label">Goals Completed</div>
+            </div>
+            <div class="progress-card">
+                <div class="progress-value" id="total-count">0</div>
+                <div class="progress-label">Total Goals</div>
+            </div>
+            <div class="progress-card">
+                <div class="progress-value" id="completion-rate">0%</div>
+                <div class="progress-label">Completion Rate</div>
+            </div>
+        </div>
+        
+        <div class="add-goal">
+            <h3>Add New Goal</h3>
+            <div class="input-group">
+                <label for="goal-title">Goal Title:</label>
+                <input type="text" id="goal-title" placeholder="e.g., Read 5 pages of Quran daily">
+            </div>
+            <div class="input-group">
+                <label for="goal-category">Category:</label>
+                <select id="goal-category">
+                    <option value="quran">Quran Reading</option>
+                    <option value="prayer">Prayer</option>
+                    <option value="charity">Charity</option>
+                    <option value="fasting">Fasting</option>
+                    <option value="dua">Dua & Dhikr</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="goal-target">Target (days/times):</label>
+                <input type="number" id="goal-target" min="1" value="30">
+            </div>
+            <button onclick="addGoal()">Add Goal</button>
+        </div>
+        
+        <div class="goals-section">
+            <h3>My Ramadan Goals</h3>
+            <div class="filter-buttons">
+                <button onclick="filterGoals('all')" class="filter-btn active">All</button>
+                <button onclick="filterGoals('active')" class="filter-btn">Active</button>
+                <button onclick="filterGoals('completed')" class="filter-btn">Completed</button>
+            </div>
+            <div id="goals-list" class="goals-list"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
