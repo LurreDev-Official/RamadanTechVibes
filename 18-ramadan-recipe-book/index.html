@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramadan Recipe Book</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📖 Ramadan Recipe Book</h1>
+        <p class="subtitle">Delicious recipes for Suhoor and Iftar</p>
+        
+        <div class="category-filter">
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="suhoor">Suhoor</button>
+            <button class="filter-btn" data-category="iftar">Iftar</button>
+            <button class="filter-btn" data-category="dessert">Dessert</button>
+        </div>
+        
+        <div id="recipesList" class="recipes-list"></div>
+    </div>
+    
+    <div id="recipeModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="recipeDetail"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

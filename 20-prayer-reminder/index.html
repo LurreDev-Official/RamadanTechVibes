@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prayer Reminder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>⏰ Prayer Reminder</h1>
+        <p class="subtitle">Never miss a prayer with notifications</p>
+        
+        <div class="current-time">
+            <div id="currentTime"></div>
+            <div id="nextPrayer"></div>
+        </div>
+        
+        <button id="enableNotifications">Enable Notifications</button>
+        
+        <div class="prayer-times">
+            <div class="prayer-time">
+                <span class="prayer-name">Fajr</span>
+                <span class="prayer-value">05:30 AM</span>
+                <label class="toggle">
+                    <input type="checkbox" class="prayer-toggle" data-prayer="fajr" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="prayer-time">
+                <span class="prayer-name">Dhuhr</span>
+                <span class="prayer-value">12:45 PM</span>
+                <label class="toggle">
+                    <input type="checkbox" class="prayer-toggle" data-prayer="dhuhr" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="prayer-time">
+                <span class="prayer-name">Asr</span>
+                <span class="prayer-value">04:15 PM</span>
+                <label class="toggle">
+                    <input type="checkbox" class="prayer-toggle" data-prayer="asr" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="prayer-time">
+                <span class="prayer-name">Maghrib</span>
+                <span class="prayer-value">06:30 PM</span>
+                <label class="toggle">
+                    <input type="checkbox" class="prayer-toggle" data-prayer="maghrib" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="prayer-time">
+                <span class="prayer-name">Isha</span>
+                <span class="prayer-value">08:00 PM</span>
+                <label class="toggle">
+                    <input type="checkbox" class="prayer-toggle" data-prayer="isha" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+        
+        <div id="status" class="status"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

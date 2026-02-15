@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Islamic Wallpaper Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 Islamic Wallpaper Generator</h1>
+        <p class="subtitle">Create beautiful Islamic wallpapers</p>
+        
+        <div class="controls">
+            <div class="control-group">
+                <label>Select Pattern:</label>
+                <select id="patternSelect">
+                    <option value="geometric">Geometric</option>
+                    <option value="calligraphy">Calligraphy</option>
+                    <option value="mosque">Mosque</option>
+                    <option value="stars">Stars</option>
+                </select>
+            </div>
+            
+            <div class="control-group">
+                <label>Color Scheme:</label>
+                <select id="colorScheme">
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                    <option value="gold">Gold</option>
+                    <option value="purple">Purple</option>
+                </select>
+            </div>
+            
+            <button id="generateBtn">Generate Wallpaper</button>
+            <button id="downloadBtn">Download</button>
+        </div>
+        
+        <canvas id="wallpaperCanvas"></canvas>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
