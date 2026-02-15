@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prayer Times Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🕌 Prayer Times Calculator</h1>
+        <p class="subtitle">Kalkulator Waktu Sholat</p>
+        
+        <div class="input-group">
+            <label for="latitude">Latitude:</label>
+            <input type="number" id="latitude" step="0.0001" value="3.5952" placeholder="e.g., 3.5952">
+        </div>
+        
+        <div class="input-group">
+            <label for="longitude">Longitude:</label>
+            <input type="number" id="longitude" step="0.0001" value="98.6722" placeholder="e.g., 98.6722">
+        </div>
+        
+        <button onclick="calculatePrayerTimes()">Calculate Prayer Times</button>
+        <button onclick="getMyLocation()">Use My Location</button>
+        
+        <div id="prayer-times" class="prayer-times"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

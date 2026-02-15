@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasbih Counter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📿 Tasbih Counter</h1>
+        <p class="subtitle">Penghitung Dzikir Digital</p>
+        
+        <div class="counter-display">
+            <div class="count" id="count">0</div>
+            <div class="target">/ <span id="target">33</span></div>
+        </div>
+        
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+        
+        <div class="dhikr-text" id="dhikrText">Subhanallah</div>
+        
+        <div class="buttons">
+            <button class="count-btn" onclick="increment()">+</button>
+            <button class="reset-btn" onclick="reset()">Reset</button>
+        </div>
+        
+        <div class="presets">
+            <button onclick="setTarget(33)">33x</button>
+            <button onclick="setTarget(99)">99x</button>
+            <button onclick="setTarget(100)">100x</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
