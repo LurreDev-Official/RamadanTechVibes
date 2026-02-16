@@ -2,6 +2,10 @@
 
 Selamat datang di **Ramadan-Tech-Vibes**, sebuah repositori yang berfokus pada proyek-proyek teknologi dengan nuansa Ramadan. Di sini, Anda akan menemukan berbagai ide proyek yang bertujuan untuk meningkatkan pengalaman spiritual dan sosial selama bulan suci Ramadan. Ayo bergabung dan beri kontribusi untuk menciptakan solusi bermanfaat!
 
+### Dibuat Oleh:
+**Edwin Hari A.P**  
+By [Lurredev.com](https://lurredev.com)
+
 ## Proyek List
 
 ### 1. Aplikasi Jadwal Imsakiyah
@@ -76,4 +80,4 @@ Jika Anda tertarik untuk berkontribusi dalam salah satu proyek ini, silakan laku
 
 ## License
 
-Proyek ini dilisensikan di bawah MIT License - lihat file [LICENSE](LICENSE) untuk detail lebih lanjut. di buat Oleh Edwin Hari A.P By Lurredev.com
+Proyek ini dilisensikan di bawah MIT License - lihat file [LICENSE](LICENSE) untuk detail lebih lanjut.
